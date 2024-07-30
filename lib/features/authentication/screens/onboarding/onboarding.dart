@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/get_instance.dart';
 
-import 'package:t_store/features/authentication/screens/widgets/onboarding_dot_navigation.dart';
-import 'package:t_store/features/authentication/screens/widgets/onboarding_next_button.dart';
-import 'package:t_store/features/authentication/screens/widgets/onboarding_page.dart';
-import 'package:t_store/features/authentication/screens/widgets/onboarding_skip.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 
-import '../../../utils/constants/text_strings.dart';
-import '../controllers/onboarding_controller.dart';
+import '../../../../utils/constants/text_strings.dart';
+import '../../controllers/onboarding/onboarding_controller.dart';
+import 'widgets/onboarding_dot_navigation.dart';
+import 'widgets/onboarding_next_button.dart';
+import 'widgets/onboarding_page.dart';
+import 'widgets/onboarding_skip.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -51,7 +51,7 @@ class OnBoardingScreen extends StatelessWidget {
           const OnBoardingDotNavigation(),
 
           ///Circular button
-          OnBoardingNextButton()
+          const OnBoardingNextButton()
         ],
       ),
     );

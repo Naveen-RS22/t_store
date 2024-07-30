@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../../utils/constants/sizes.dart';
-import '../../../../utils/helpers/helper_functions.dart';
+import '/../../../../utils/constants/sizes.dart';
+import '/../../../../utils/helpers/helper_functions.dart';
 
 
 class OnBoadringPage extends StatelessWidget {
@@ -17,7 +17,7 @@ class OnBoadringPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(TSizes.defaultSpace),
+      padding: const EdgeInsets.all(TSizes.defaultSpace),
       child: Column(
         children: [
           Image(
