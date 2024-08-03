@@ -4,7 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
-import 'features/shop/screens/home.dart';
+import 'features/shop/screens/home/home.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -16,7 +16,7 @@ class NavigationMenu extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Obx(
         () => NavigationBar(
-          height: 80,
+          height: 65,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
           backgroundColor: dark ? TColors.black : TColors.white,
