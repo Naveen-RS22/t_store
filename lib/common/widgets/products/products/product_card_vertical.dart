@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/common/styles/shadows.dart';
@@ -109,31 +108,37 @@ class TProductCardVertical extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      TProductPrixeText(
-                        price: '35.5',
-                      ),
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: TColors.dark,
-                            borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(TSizes.cardRadiusMd),
-                              bottomRight:
-                                  Radius.circular(TSizes.productImageRadius),
-                            )),
-                        child: const SizedBox(
-                            width: TSizes.iconLg * 1.2,
-                            height: TSizes.iconLg * 1.2,
-                            child: Center(
-                              child: Icon(
-                                Iconsax.add,
-                                color: TColors.white,
-                              ),
-                            )),
-                      )
-                    ],
+
+                  ///price Row
+                ],
+              ),
+            ),
+            Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(left: TSizes.sm),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const TProductPrixeText(
+                    price: '35.5',
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                        color: TColors.dark,
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(TSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(TSizes.productImageRadius),
+                        )),
+                    child: const SizedBox(
+                        width: TSizes.iconLg * 1.2,
+                        height: TSizes.iconLg * 1.2,
+                        child: Center(
+                          child: Icon(
+                            Iconsax.add,
+                            color: TColors.white,
+                          ),
+                        )),
                   )
                 ],
               ),
