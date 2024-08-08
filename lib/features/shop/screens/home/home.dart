@@ -16,6 +16,7 @@ import '../../../../common/widgets/custom_shapes/containers/primary_header_conta
 import '../../../../common/widgets/custom_shapes/containers/search_container.dart';
 import '../../../../common/widgets/image_text_widgets/vertical_image_texts.dart';
 import '../../../../common/widgets/images/t_rounded_image.dart';
+import '../../../../common/widgets/layouts/grid_layout.dart';
 import '../../../../common/widgets/products/products/product_card_vertical.dart';
 import '../../../../common/widgets/texts/seaction_heading.dart';
 
@@ -24,11 +25,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
-            TPrimaryHeaderContainer(
+            const TPrimaryHeaderContainer(
               child: Column(
                 children: [
                   ///Appbar
@@ -36,7 +37,6 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-
                   ///Search bar
                   TSearchContainer(
                     text: 'Search in Store',
@@ -44,12 +44,12 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: TSizes.spaceBtwSections,
                   ),
-
                   ///Categories
                   Padding(
                     padding: EdgeInsets.only(left: TSizes.defaultSpace),
                     child: Column(
                       children: [
+
                         ///Heading
                         TSectionHeading(
                           title: 'Popular Categories',
@@ -71,24 +71,23 @@ class HomeScreen extends StatelessWidget {
 
             ///Body part
             Padding(
-                padding: EdgeInsets.all(TSizes.defaultSpace),
+                padding: const EdgeInsets.all(TSizes.defaultSpace),
                 child: Column(
                   children: [
                     ///Promo Slider
-                    TPromoSlider(
+                    const TPromoSlider(
                       banners: [
                         TImages.promoBanner1,
                         TImages.promoBanner2,
                         TImages.promoBanner3
                       ],
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: TSizes.spaceBtwSections,
                     ),
 
                     ///popular products
-
-                    TProductCardVertical(),
+                    TGridLayout(itemBuilder:  (_, index) => const TProductCardVertical(),itemCount: 4,)
                   ],
                 ))
           ],
@@ -97,3 +96,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
