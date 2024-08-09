@@ -5,7 +5,7 @@
 
 version:
   revision: "b0366e0a3f089e15fd89c97604ab402fe26b724c"
-  channel: "stable"
+  channel: "[user-branch]"
 
 project_type: app
 
