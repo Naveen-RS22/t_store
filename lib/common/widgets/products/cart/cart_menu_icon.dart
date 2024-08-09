@@ -6,7 +6,7 @@ import '../../../../utils/constants/colors.dart';
 class TCardCountIcon extends StatelessWidget {
   const TCardCountIcon({
     super.key,
-    required this.iconColor  ,
+     this.iconColor=TColors.black  ,
     required this.onPressed,
   });
 
